@@ -59,9 +59,9 @@ export default defineComponent({
     computed:{
     ...mapState(['currentPath']),
   },
-submitForm(formEl){
-      if (!formEl) return
-      formEl.validate((valid) => {
+submitForm(ruleFormRef){
+      if (!ruleFormRef) return
+      ruleFormRef.validate((valid) => {
         if (valid) {
           console.log('submit!')
           login({
